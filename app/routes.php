@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::resource('ticket', 'TicketController');
+
+Route::get('/', 'TicketController@index');
